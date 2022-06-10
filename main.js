@@ -51,13 +51,12 @@
 	const positiveNumbers = [5, 2, 13, 17, 4, 102, 3000];
 	// Challenge 3 Code
 
-	let evens = []
+	
 	for (let i = 0; i < positiveNumbers.length; i++){
 		if (positiveNumbers[i] % 2 === 0){
-			evens.push(positiveNumbers[i]);
+			console.log(positiveNumbers[i]);
 		}
 	}
-	console.log(evens)
 
 
 	console.log("\n");
@@ -67,13 +66,11 @@
 	const mixedSignNumbers = [3, 15, 14, -2, -3, -8, -103, 4];
 	// Challenge 4 Code
 
-	let even_nums = []
 	for (let i = 0; i < mixedSignNumbers.length; i++){
 		if (mixedSignNumbers[i] % 2 === 0){
-			even_nums.push(mixedSignNumbers[i]);
+			console.log(mixedSignNumbers[i]);
 		}
 	}
-	console.log(even_nums)
 
 
 	console.log("\n");
@@ -146,9 +143,8 @@
 	// Loop through the `students` array from Challenge 1, starting at index 3 and ending at index 10 (INCLUSIVE), logging out each value individually.
 	// Challenge 9 Code
 
-	let new_stu = students.slice(3, 11)
-	for (let i = 0; i < new_stu.length; i++){
-		console.log(new_stu[i])
+	for (let i = 3; i < 11; i++){
+		console.log(students[i])
 	}
 
 
@@ -160,14 +156,9 @@
 	// Challenge 10 Code
 
 	const new_arr = [];
-	for (let i = 0; i < students.length; i++){
+	for (let i = 3; i < 11; i++){
 		new_arr.push(students[i])
 	}
-	new_arr.shift()
-	new_arr.shift()
-	new_arr.shift()
-	new_arr.pop()
-	new_arr.pop()
 	for (let j = 0; j < new_arr.length; j++){
 			console.log(new_arr[j])
 	}
@@ -179,9 +170,9 @@
 	// Make a COPY of the `students` array *using .slice*, starting at index 3 and ending at index 10 (INCLUSIVE), then log out each value of the copy individually. THEN log out each value of the original array. Notice that the original array didn't get any values taken out of it, because `slice` does NOT modify the original array.
 	// Challenge 11 Code
 
-	let slicer = students.slice(3, 11);
-	for (let i = 0; i < slicer.length; i++){
-		console.log(slicer[i]);
+	let sliced = students.slice(3, 11);
+	for (let i = 0; i < sliced.length; i++){
+		console.log(sliced[i]);
 	}
 	console.log("===============");
 	for (let i= 0; i < students.length; i++){
@@ -196,7 +187,8 @@
 	const dinosaurs = ['Velociraptor', 'T-Rex', 'Stegosaurus', 'Triceratops', 'Dimetrodon', 'Allosaur', 'Spinosaurus', 'Gigantosaur']
 	// Challenge 12 Code
 	
-	let splicer = dinosaurs.splice(4,3);
+	let spliced = dinosaurs.splice(4,3);
+	console.log(`The spliced dinos are: ${spliced}`)
 	for (let i = 0; i < dinosaurs.length; i++){
 		console.log(dinosaurs[i]);
 	}
@@ -208,8 +200,7 @@
 	// Use .join to change the dinosaur strings from the above array into one string with a '*' string as the "separator". Then console.log out that string.
 	// Challenge 13 Code
 
-	let dinos = dinosaurs.concat(splicer);
-	console.log(dinos.join("*"));
+	console.log(dinosaurs.join("*"));
 
 
 	console.log("\n");
@@ -218,8 +209,10 @@
 	// Use .reverse to reverse the dinosaur array and then log out the original array. .reverse DOES change the original array.
 	// Challenge 14 Code
 
-	console.log(dinos.reverse());
-	console.log(dinos);
+	dinosaurs.reverse();
+	for (let i = 0; i < dinosaurs.length; i++){
+		console.log(dinosaurs[i]);
+	}
 
 
 	console.log("\n");
@@ -229,10 +222,12 @@
 	// Use .concat to combine those two arrays into a NEW array you make (.concat RETURNS an array). Then console.log out each value of that new array individually. Now console.log both the primaries and secondaries arrays, noting that .concat does NOT mutate the original arrays.
 	// Challenge 15 Code
 
-	const arr1 = ["Up", "Down", "Left", "Right"];
-	const arr2 = ["Square", "Circle", "Triangle", "Rhombus"];
+	let arr1 = ["Up", "Down", "Left", "Right"];
+	let arr2 = ["Square", "Circle", "Triangle", "Rhombus"];
 	let con_arrs = arr1.concat(arr2);
-	console.log(con_arrs)
+	for (let i = 0; i < con_arrs.length; i++){
+		console.log(con_arrs[i])
+	}
 	console.log(arr1);
 	console.log(arr2);
 
